@@ -2,10 +2,13 @@ import React from 'react'
 import { ApplicationWrapper } from './components/common/app-layout'
 import { AppBarHeader } from './components/header/app-bar.component'
 import { Sidebar } from './components/navigator/sidebar-component'
-import { Box, CssBaseline, useMediaQuery } from '@mui/material'
+import { Box, Button, AppBar, Link } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import AddIcon from '@mui/icons-material/Add'
+import EditIcon from '@mui/icons-material/Edit'
+import Example from './components/table/table-main'
 
-const drawerWidth = 256
+const drawerWidth = 220
 
 let theme = createTheme({
   palette: {
@@ -158,7 +161,8 @@ function App() {
           {/* <CssBaseline /> */}
           <Box
             component="nav"
-            sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}>
+            sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          >
             <Sidebar
               PaperProps={{ style: { width: drawerWidth } }}
               sx={{ display: { sm: 'block', xs: 'none' } }}
@@ -166,13 +170,42 @@ function App() {
           </Box>
           <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
             <AppBarHeader />
-            <Box sx={{ width: '100%', flex: 1, background: '#f4f7fb' }}>
+            <Box
+              sx={{
+                width: '100%',
+                flex: 1,
+                background: '#f4f7fb',
+                display: 'flex',
+                flexDirection: 'column'
+              }}
+            >
               <Box
                 sx={{
-                  padding: '24px',
-                  height: '100%'
-                }}>
-                <Box sx={{ border: '1px solid black', height: '100%' }}>aa</Box>
+                  display: 'flex',
+                  marginLeft: '1rem',
+                  paddingTop: '.5rem'
+                }}
+              >
+                <Button startIcon={<AddIcon />}>Zlecenie</Button>
+                <Button sx={{ marginLeft: '1rem' }} startIcon={<EditIcon />}>
+                  Edycja
+                </Button>
+              </Box>
+
+              <Box
+                sx={{
+                  padding: '8px 24px 24px 24px',
+                  flex: 1
+                }}
+              >
+                <Box
+                  sx={{
+                    // border: '1px solid #ccc',
+                    height: '100%'
+                  }}
+                >
+                  <Example />
+                </Box>
               </Box>
             </Box>
             {/* <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>

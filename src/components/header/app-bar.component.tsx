@@ -5,31 +5,39 @@ import {
   Link,
   Tooltip,
   Avatar,
+  Divider,
   Typography,
   Tabs,
-  Tab
+  Tab,
+  Button,
+  Box
 } from '@mui/material'
 import AppBar from '@mui/material/AppBar'
 import MenuIcon from '@mui/icons-material/Menu'
 import NotificationsIcon from '@mui/icons-material/Notifications'
-
-const lightColor = 'rgba(255, 255, 255, 0.7)'
+import AddIcon from '@mui/icons-material/Add'
+import EditIcon from '@mui/icons-material/Edit'
 
 export function AppBarHeader() {
   return (
     <>
       <AppBar
-        sx={{ background: '#8bba14', height: '60px' }}
+        sx={{ background: '#fff', height: '61px' }}
         position="sticky"
-        elevation={0}>
+        elevation={0}
+      >
         <Toolbar sx={{ height: '100%' }}>
           <Grid container spacing={1} alignItems="center">
+            <Grid item>
+              <Typography sx={{ color: '#012328' }}>Warsztat</Typography>
+            </Grid>
             <Grid sx={{ display: { sm: 'none', xs: 'block' } }} item>
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
                 onClick={() => null}
-                edge="start">
+                edge="start"
+              >
                 <MenuIcon />
               </IconButton>
             </Grid>
@@ -40,31 +48,33 @@ export function AppBarHeader() {
                 variant="body2"
                 sx={{
                   textDecoration: 'none',
-                  color: lightColor,
+                  color: '#8bba14',
                   '&:hover': {
-                    color: 'common.white'
+                    textDecoration: 'underline'
                   }
                 }}
                 rel="noopener noreferrer"
-                target="_blank">
+                target="_blank"
+              >
                 Go to docs
               </Link>
             </Grid>
             <Grid item>
               <Tooltip title="Alerts • No alerts">
-                <IconButton color="inherit">
+                <IconButton>
                   <NotificationsIcon />
                 </IconButton>
               </Tooltip>
             </Grid>
             <Grid item>
-              <IconButton color="inherit" sx={{ p: 0.5 }}>
-                <Avatar src="/static/images/avatar/1.jpg" alt="My Avatar" />
+              <IconButton sx={{ p: 0.5 }}>
+                <Avatar src="/static/images/avatar/1.jpg" alt="Artur" />
               </IconButton>
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
+      <Divider />
     </>
   )
 }

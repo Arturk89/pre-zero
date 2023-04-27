@@ -683,6 +683,37 @@
   resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.5.0.tgz"
   integrity sha512-bkUDCp8o1MvFO+qxkODcbhSqRa6P2GXgrGZVpt0dCXNW2HCSCqYI0ZoAqEOSAjRWmmlKcYgFvN4B4S+zo/f8kg==
 
+"@tanstack/match-sorter-utils@8.8.4":
+  version "8.8.4"
+  resolved "https://registry.yarnpkg.com/@tanstack/match-sorter-utils/-/match-sorter-utils-8.8.4.tgz#0b2864d8b7bac06a9f84cb903d405852cc40a457"
+  integrity sha512-rKH8LjZiszWEvmi01NR72QWZ8m4xmXre0OOwlRGnjU01Eqz/QnN+cqpty2PJ0efHblq09+KilvyR7lsbzmXVEw==
+  dependencies:
+    remove-accents "0.4.2"
+
+"@tanstack/react-table@8.8.5":
+  version "8.8.5"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-table/-/react-table-8.8.5.tgz#d345fd855bb8067cd32b7a9b5231bdefd9cbde55"
+  integrity sha512-g/t21E/ICHvaCOJOhsDNr5QaB/6aDQEHFbx/YliwwU/CJThMqG+dS28vnToIBV/5MBgpeXoGRi2waDJVJlZrtg==
+  dependencies:
+    "@tanstack/table-core" "8.8.5"
+
+"@tanstack/react-virtual@3.0.0-beta.54":
+  version "3.0.0-beta.54"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-virtual/-/react-virtual-3.0.0-beta.54.tgz#755979455adf13f2584937204a3f38703e446037"
+  integrity sha512-D1mDMf4UPbrtHRZZriCly5bXTBMhylslm4dhcHqTtDJ6brQcgGmk8YD9JdWBGWfGSWPKoh2x1H3e7eh+hgPXtQ==
+  dependencies:
+    "@tanstack/virtual-core" "3.0.0-beta.54"
+
+"@tanstack/table-core@8.8.5":
+  version "8.8.5"
+  resolved "https://registry.yarnpkg.com/@tanstack/table-core/-/table-core-8.8.5.tgz#4d75b452a9989a273174df1b9249157292a15bd5"
+  integrity sha512-Xnwa1qxpgvSW7ozLiexmKp2PIYcLBiY/IizbdGriYCL6OOHuZ9baRhrrH51zjyz+61ly6K59rmt6AI/3RR+97Q==
+
+"@tanstack/virtual-core@3.0.0-beta.54":
+  version "3.0.0-beta.54"
+  resolved "https://registry.yarnpkg.com/@tanstack/virtual-core/-/virtual-core-3.0.0-beta.54.tgz#12259d007911ad9fce1388385c54a9141f4ecdc4"
+  integrity sha512-jtkwqdP2rY2iCCDVAFuaNBH3fiEi29aTn2RhtIoky8DTTiCdc48plpHHreLwmv1PICJ4AJUUESaq3xa8fZH8+g==
+
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-1.1.2.tgz"
@@ -1777,6 +1808,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+highlight-words@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/highlight-words/-/highlight-words-1.2.1.tgz#6de4194bb28fc647431859af7c50531bb93af80e"
+  integrity sha512-FtF50tuaaYathtSPFk5FwGf0Zex5iqNsTx/OsVM6mdsB3xqs5nM+PAoPWs/gIUxGF3/Qqu2v86sAUenTh6oL3Q==
+
 hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.1:
   version "3.3.2"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
@@ -2139,6 +2175,16 @@ match-sorter@^6.0.2:
   dependencies:
     "@babel/runtime" "^7.12.5"
     remove-accents "0.4.2"
+
+material-react-table@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/material-react-table/-/material-react-table-1.11.0.tgz#55183c3795264a1652ec9544496943f78e736950"
+  integrity sha512-IQxoH9ayiVMpL2Ebzqzb+jr64mDFfpE11WpDXYyQFM5sM/bsXFQHGDjwpJ1HsVcJEtRlcjrBTiP6RTp30bG1BA==
+  dependencies:
+    "@tanstack/match-sorter-utils" "8.8.4"
+    "@tanstack/react-table" "8.8.5"
+    "@tanstack/react-virtual" "3.0.0-beta.54"
+    highlight-words "1.2.1"
 
 meow@^9.0.0:
   version "9.0.0"

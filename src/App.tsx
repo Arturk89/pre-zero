@@ -1,8 +1,8 @@
 import React from 'react'
 import { ApplicationWrapper } from './components/common/app-layout'
 import { AppBarHeader } from './components/header/app-bar.component'
-import { Sidebar } from './components/navigator/sidebar-component'
-import { Box, Button, AppBar, Link } from '@mui/material'
+import { Sidebar } from './components/sidebar/sidebar-component'
+import { Box, Button, AppBar, Link, Typography } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import AddIcon from '@mui/icons-material/Add'
 import EditIcon from '@mui/icons-material/Edit'
@@ -178,7 +178,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <ApplicationWrapper>
         <Box sx={{ display: 'flex', height: '100%' }}>
-          {/* <CssBaseline /> */}
           <Box
             component="nav"
             sx={{
@@ -186,10 +185,7 @@ function App() {
               flexShrink: { sm: 0 }
             }}
           >
-            <Sidebar
-              PaperProps={{ style: { width: drawerWidth } }}
-              sx={{ display: { sm: 'block', xs: 'none' } }}
-            />
+            <Sidebar PaperProps={{ style: { width: drawerWidth } }} />
           </Box>
           <Box
             sx={{
@@ -200,7 +196,7 @@ function App() {
             }}
           >
             <AppBarHeader />
-            <Box sx={{ height: '30px' }}></Box>
+
             <Box
               sx={{
                 width: '100%',

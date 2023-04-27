@@ -27,6 +27,8 @@ import ConstructionIcon from '@mui/icons-material/Construction'
 import ExpandLess from '@mui/icons-material/ExpandLess'
 import ExpandMore from '@mui/icons-material/ExpandMore'
 
+import style from './style.module.scss'
+
 const categories = [
   {
     id: 'Dział Techniczny',
@@ -57,23 +59,10 @@ const item = {
   }
 }
 
-const subchildcss = {
-  py: '1px',
-  px: 3,
-  color: 'rgba(255, 255, 255, 0.7)',
-  '&:hover, &:focus': {
-    bgcolor: 'rgba(255, 255, 255, 0.07)'
-  }
-}
-
-const itemCategory = {
-  boxShadow: '0 -1px 0 rgb(255,255,255,0.1) inset',
-  py: 1.5,
-  px: 3
-}
 //darken 012328
 //lighten 01343c
 //green 8bba14
+
 export function Sidebar(props: DrawerProps) {
   const { ...other } = props
 
@@ -88,9 +77,6 @@ export function Sidebar(props: DrawerProps) {
           borderRightWidth: '1px',
           borderRightColor: 'primary.light'
         }
-      }}
-      style={{
-        border: '1px solid red'
       }}
     >
       <List disablePadding>
@@ -118,22 +104,6 @@ export function Sidebar(props: DrawerProps) {
                     {/* {true ? <ExpandLess /> : <ExpandMore />} */}
                   </ListItemButton>
                 </ListItem>
-                {/* <Collapse in={true} timeout="auto" unmountOnExit>
-                  <List
-                    component="div"
-                    disablePadding
-                    sx={{ ml: 1, mt: 1, mb: 1 }}>
-                    {subChildren.map((s) => (
-                      <ListItemButton
-                        sx={subchildcss}
-                        disablePadding
-                        key={s.id}>
-                        <ListItemIcon>{s.icon}</ListItemIcon>
-                        <ListItemText>{s.id}</ListItemText>
-                      </ListItemButton>
-                    ))}
-                  </List>
-                </Collapse> */}
               </>
             ))}
             <Divider sx={{ mt: 2 }} />

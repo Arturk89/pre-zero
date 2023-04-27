@@ -168,52 +168,35 @@ function App() {
               sx={{ display: { sm: 'block', xs: 'none' } }}
             />
           </Box>
-          <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+          <Box
+            sx={{
+              flex: 1,
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%'
+            }}
+          >
             <AppBarHeader />
+            <Box sx={{ height: '30px' }}></Box>
             <Box
               sx={{
                 width: '100%',
                 flex: 1,
-                background: '#f4f7fb',
+                background: 'rgba(1, 35, 40, 1)',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                overflow: 'hidden'
               }}
             >
               <Box
                 sx={{
-                  display: 'flex',
-                  marginLeft: '1rem',
-                  paddingTop: '.5rem'
-                }}
-              >
-                <Button startIcon={<AddIcon />}>Zlecenie</Button>
-                <Button sx={{ marginLeft: '1rem' }} startIcon={<EditIcon />}>
-                  Edycja
-                </Button>
-              </Box>
-
-              <Box
-                sx={{
                   padding: '8px 24px 24px 24px',
-                  flex: 1
+                  height: '100%'
                 }}
               >
-                <Box
-                  sx={{
-                    // border: '1px solid #ccc',
-                    height: '100%'
-                  }}
-                >
-                  <Example />
-                </Box>
+                <Example />
               </Box>
             </Box>
-            {/* <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
-            <Content />
-          </Box>
-          <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
-            <Copyright />
-          </Box> */}
           </Box>
         </Box>
       </ApplicationWrapper>

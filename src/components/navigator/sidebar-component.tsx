@@ -73,6 +73,7 @@ const itemCategory = {
 }
 //darken 012328
 //lighten 01343c
+//green 8bba14
 export function Sidebar(props: DrawerProps) {
   const { ...other } = props
 

@@ -13,9 +13,29 @@ const drawerWidth = 220
 let theme = createTheme({
   palette: {
     primary: {
-      light: '#63ccff',
-      main: '#009be5',
-      dark: '#006db3'
+      light: '#335C63',
+      main: '#01343c',
+      dark: '#00242A'
+    },
+    error: {
+      light: '#C74834',
+      main: '#BA1B02',
+      dark: '#821201'
+    },
+    warning: {
+      light: '#F08F47',
+      main: '#ED741A',
+      dark: '#A55112'
+    },
+    success: {
+      light: '#A2C743',
+      main: '#8BBA14',
+      dark: '#61820E'
+    },
+    info: {
+      light: '#527DC7',
+      main: '#275DBA',
+      dark: '#1B4182'
     }
   },
   typography: {
@@ -161,7 +181,10 @@ function App() {
           {/* <CssBaseline /> */}
           <Box
             component="nav"
-            sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+            sx={{
+              width: { sm: drawerWidth },
+              flexShrink: { sm: 0 }
+            }}
           >
             <Sidebar
               PaperProps={{ style: { width: drawerWidth } }}

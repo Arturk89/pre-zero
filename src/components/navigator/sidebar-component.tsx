@@ -81,7 +81,17 @@ export function Sidebar(props: DrawerProps) {
     <Drawer
       variant="permanent"
       {...other}
-      sx={{ '& .MuiDrawer-paper': { backgroundColor: '#01343c' } }}
+      sx={{
+        '& .MuiDrawer-paper': {
+          backgroundColor: 'primary.main',
+          borderRightStyle: 'solid',
+          borderRightWidth: '1px',
+          borderRightColor: 'primary.light'
+        }
+      }}
+      style={{
+        border: '1px solid red'
+      }}
     >
       <List disablePadding>
         <ListItem sx={{ height: '60px' }}>
@@ -95,7 +105,7 @@ export function Sidebar(props: DrawerProps) {
         {/* </ListItem> */}
         <Divider />
         {categories.map(({ id, children }) => (
-          <Box key={id} sx={{ bgcolor: '#012328' }}>
+          <Box key={id} sx={{ bgcolor: 'primary.dark' }}>
             <ListItem sx={{ py: 2, px: 3 }}>
               <ListItemText sx={{ color: '#fff' }}>{id}</ListItemText>
             </ListItem>

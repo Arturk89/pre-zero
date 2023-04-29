@@ -1,58 +1,21 @@
 import {
-  Drawer,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   ListItemButton,
   Divider,
-  Box,
-  DrawerProps,
-  Collapse
+  Box
 } from '@mui/material'
-import PeopleIcon from '@mui/icons-material/People'
-import DnsRoundedIcon from '@mui/icons-material/DnsRounded'
-import PermMediaOutlinedIcon from '@mui/icons-material/PhotoSizeSelectActual'
-import PublicIcon from '@mui/icons-material/Public'
-import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet'
-import GroupIcon from '@mui/icons-material/Group'
-import Logo from '@/assets/logo_1.png'
-
-import BuildIcon from '@mui/icons-material/Build'
-import WarehouseIcon from '@mui/icons-material/Warehouse'
-import LocalShippingIcon from '@mui/icons-material/LocalShipping'
-import SettingsIcon from '@mui/icons-material/Settings'
-import ConstructionIcon from '@mui/icons-material/Construction'
-
-import ExpandLess from '@mui/icons-material/ExpandLess'
-import ExpandMore from '@mui/icons-material/ExpandMore'
+import { NavLink } from 'react-router-dom'
+import { sidebar } from '../../routes/sidebar'
+import Logo from '../../assets/logo_1.png'
 
 import style from './style.module.scss'
 
-const categories = [
-  {
-    id: 'Dział Techniczny',
-    children: [
-      {
-        id: 'Warsztat',
-        icon: <ConstructionIcon />,
-        active: true,
-        subChildren: [
-          { id: 'Dodaj', icon: <BuildIcon /> },
-          { id: 'Wyświetl', icon: <BuildIcon /> }
-        ]
-      },
-      { id: 'Magazyn', icon: <WarehouseIcon />, subChildren: [] },
-      { id: 'Pojazdy', icon: <LocalShippingIcon />, subChildren: [] },
-      { id: 'Uzytkownicy', icon: <GroupIcon />, subChildren: [] },
-      { id: 'Ustawienia', icon: <SettingsIcon />, subChildren: [] }
-    ]
-  }
-]
-
 const item = {
   // py: '1px',
-  px: 3,
+  px: 4,
   color: 'rgba(255, 255, 255, 0.7)',
   '&:hover, &:focus': {
     bgcolor: 'rgba(255, 255, 255, 0.07)'
@@ -63,20 +26,16 @@ const item = {
 //lighten 01343c
 //green 8bba14
 
-export function Sidebar(props: DrawerProps) {
-  const { ...other } = props
-
+export function Sidebar() {
   return (
-    <Drawer
-      variant="permanent"
-      {...other}
+    <Box
       sx={{
-        '& .MuiDrawer-paper': {
-          backgroundColor: 'primary.main',
-          borderRightStyle: 'solid',
-          borderRightWidth: '1px',
-          borderRightColor: 'primary.light'
-        }
+        width: '220px',
+        height: '100%',
+        backgroundColor: 'primary.main',
+        borderRightStyle: 'solid',
+        borderRightWidth: '1px',
+        borderRightColor: 'primary.light'
       }}
     >
       <List disablePadding>
@@ -86,22 +45,20 @@ export function Sidebar(props: DrawerProps) {
             style={{ height: '100%', padding: '.2rem 0 .2rem 8px' }}
           />
         </ListItem>
-        {/* <ListItem sx={{ ...itemCategory, fontSize: 20, color: '#fff' }}> */}
-        {/* Paperbase */}
-        {/* </ListItem> */}
         <Divider />
-        {categories.map(({ id, children }) => (
+        {sidebar.map(({ id, children }) => (
           <Box key={id} sx={{ bgcolor: 'primary.dark' }}>
             <ListItem sx={{ py: 2, px: 3 }}>
               <ListItemText sx={{ color: '#fff' }}>{id}</ListItemText>
             </ListItem>
-            {children.map(({ id: childId, icon, active, subChildren }) => (
+            {children.map(({ id, Icon, href }) => (
               <>
-                <ListItem disablePadding key={childId}>
-                  <ListItemButton selected={active} sx={item}>
-                    <ListItemIcon>{icon}</ListItemIcon>
-                    <ListItemText>{childId}</ListItemText>
-                    {/* {true ? <ExpandLess /> : <ExpandMore />} */}
+                <ListItem disablePadding key={id}>
+                  <ListItemButton component={NavLink} to={href} sx={item}>
+                    <ListItemIcon sx={{ paddingRight: '1rem' }}>
+                      <Icon />
+                    </ListItemIcon>
+                    <ListItemText>{id}</ListItemText>
                   </ListItemButton>
                 </ListItem>
               </>
@@ -110,6 +67,6 @@ export function Sidebar(props: DrawerProps) {
           </Box>
         ))}
       </List>
-    </Drawer>
+    </Box>
   )
 }

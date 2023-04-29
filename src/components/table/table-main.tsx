@@ -4,7 +4,7 @@ import MaterialReactTable, {
   MRT_SortingState,
   MRT_Virtualizer
 } from 'material-react-table'
-import { Box, IconButton } from '@mui/material'
+import { Box, IconButton, Button } from '@mui/material'
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip'
 import { styled } from '@mui/material/styles'
 import AddIcon from '@mui/icons-material/Add'
@@ -20,17 +20,6 @@ export type Person = {
   city: string
   state: string
 }
-
-const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
-  <Tooltip {...props} arrow classes={{ popper: className }} />
-))(({ theme }) => ({
-  [`& .${tooltipClasses.arrow}`]: {
-    color: '#01343c'
-  },
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: '#01343c'
-  }
-}))
 
 const Example = () => {
   //should be memoized or stable
@@ -93,14 +82,13 @@ const Example = () => {
       enableColumnVirtualization
       enableGlobalFilterModes
       enablePagination={false}
+      enableBottomToolbar={true}
       enableRowNumbers
       enableRowVirtualization
       onSortingChange={setSorting}
       state={{ isLoading, sorting }}
       rowVirtualizerInstanceRef={rowVirtualizerInstanceRef} //optional
-      rowVirtualizerProps={{ overscan: 5 }} //optionally customize the row virtualizer
-      columnVirtualizerProps={{ overscan: 2 }} //optionally customize the column virtualizer
-      enableStickyFooter
+      muiTableBodyProps={{ sx: { background: '#fff' } }}
       muiTablePaperProps={{
         sx: {
           display: 'flex',
@@ -109,6 +97,9 @@ const Example = () => {
           maxHeight: '100%',
           overflow: 'hidden'
         }
+      }}
+      muiTableContainerProps={{
+        sx: { zIndex: 1 }
       }}
       renderTopToolbarCustomActions={() => (
         <Box sx={{ display: 'flex' }}>

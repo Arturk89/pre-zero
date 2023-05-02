@@ -1,1 +1,7 @@
+export { AppBarWrapper } from './app-bar-wrapper/app-bar-wrapper.component'
+export { AppBarContainer } from './app-bar-container/app-bar-container.component'
+export { HeaderActions } from './header-actions/header-actions.component'
+export { HeaderBreadcrumb } from './header-breadcrumb/header-breadcrumb.component'
+export { HeaderGradient } from './header-gradient/header-gradient.component'
+export { HeaderTitle } from './header-title/header-title.component'
 export { AppBarHeader } from './app-bar.component'

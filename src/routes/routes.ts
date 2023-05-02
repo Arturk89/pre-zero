@@ -1,13 +1,23 @@
 import { lazy, ComponentType } from 'react'
 import { PathStructure, Paths, CreateRoute, RouteObject } from './routes.model'
 import { RoleDetails } from './roles.model'
-import { roles } from './roles'
+import { roles, allRoles } from './roles'
 
 export const paths: PathStructure = {
+  [Paths.ROOT]: {
+    name: '',
+    path: '/',
+    roles: allRoles
+  },
   [Paths.HOME]: {
     name: 'Dzień dobry',
-    path: '/',
-    roles: [roles.ADMIN, roles.ADMIN_USER, roles.DISPATCHER, roles.USER]
+    path: 'home',
+    roles: allRoles
+  },
+  [Paths.LOGIN]: {
+    name: 'Logowanie',
+    path: 'login',
+    roles: allRoles
   },
   [Paths.STORAGE]: {
     name: 'Magazyn',
@@ -36,23 +46,29 @@ export const paths: PathStructure = {
   }
 }
 
+const Root = lazy(() =>
+  import('layout/root').then((module) => ({ default: module.Root }))
+)
 const Home = lazy(() =>
-  import('../pages/home').then((module) => ({ default: module.Home }))
+  import('pages/home').then((module) => ({ default: module.Home }))
+)
+const Login = lazy(() =>
+  import('pages/login').then((module) => ({ default: module.Login }))
 )
 const Storage = lazy(() =>
-  import('../pages/storage').then((module) => ({ default: module.Storage }))
+  import('pages/storage').then((module) => ({ default: module.Storage }))
 )
 const Garage = lazy(() =>
-  import('../pages/garage').then((module) => ({ default: module.Garage }))
+  import('pages/garage').then((module) => ({ default: module.Garage }))
 )
 const Cars = lazy(() =>
-  import('../pages/cars').then((module) => ({ default: module.Cars }))
+  import('pages/cars').then((module) => ({ default: module.Cars }))
 )
 const Users = lazy(() =>
-  import('../pages/users').then((module) => ({ default: module.Users }))
+  import('pages/users').then((module) => ({ default: module.Users }))
 )
 const Settings = lazy(() =>
-  import('../pages/settings').then((module) => ({ default: module.Settings }))
+  import('pages/settings').then((module) => ({ default: module.Settings }))
 )
 
 function createRoute(
@@ -66,12 +82,26 @@ function createRoute(
 }
 
 export const routes: RouteObject = {
+  [Paths.ROOT]: createRoute(
+    'key-root',
+    paths.ROOT.name,
+    paths.ROOT.path,
+    paths.ROOT.roles,
+    Root
+  ),
   [Paths.HOME]: createRoute(
     'key-home',
     paths.HOME.name,
     paths.HOME.path,
     paths.HOME.roles,
     Home
+  ),
+  [Paths.LOGIN]: createRoute(
+    'key-login',
+    paths.LOGIN.name,
+    paths.LOGIN.path,
+    paths.LOGIN.roles,
+    Login
   ),
   [Paths.STORAGE]: createRoute(
     'key-storage',

@@ -2,6 +2,8 @@ import { ComponentType } from 'react'
 import { RoleDetails } from './roles.model'
 
 enum Paths {
+  ROOT = 'ROOT',
+  LOGIN = 'LOGIN',
   HOME = 'HOME',
   STORAGE = 'STORAGE',
   GARAGES = 'GARAGES',
@@ -11,7 +13,9 @@ enum Paths {
 }
 
 type PathName =
+  | Paths.ROOT
   | Paths.HOME
+  | Paths.LOGIN
   | Paths.STORAGE
   | Paths.GARAGES
   | Paths.CARS

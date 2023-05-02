@@ -18,3 +18,10 @@ export const roles: UserRole = {
     id: 4
   }
 }
+
+export const allRoles = [
+  roles.ADMIN,
+  roles.ADMIN_USER,
+  roles.DISPATCHER,
+  roles.USER
+]

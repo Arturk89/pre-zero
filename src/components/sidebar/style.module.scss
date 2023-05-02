@@ -1,0 +1,39 @@
+.sidebarWrapper {
+  width: 220px;
+  height: 100%;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+.sidebarLogo {
+  height: 60px;
+
+  &__img {
+    height: 100%;
+    padding: 0.2rem 0 0.2rem 8px;
+  }
+}
+
+.sidebarTitle {
+  padding: 16px 24px;
+
+  &__text {
+    color: #fff;
+  }
+}
+
+.sidebarLink {
+  &__button {
+    padding-left: 32px;
+    padding-right: 32px;
+    color: rgba(255, 255, 255, 0.7) !important;
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.07) !important;
+    }
+  }
+
+  &__icon {
+    padding-right: 1rem;
+  }
+}

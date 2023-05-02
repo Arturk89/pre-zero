@@ -1,19 +1,22 @@
 import { Box } from '@mui/material'
-import { HeaderTitle } from './header-title.component'
-import { HeaderGradient } from './header-bg-gradient.component'
-import { AppBarWrapper, WrapperContainer } from './app-bar-wrapper'
-import { HeaderBreadcrumb } from './header-breadcrumb'
-import { HeaderActions } from './header-actions'
+import {
+  AppBarWrapper,
+  AppBarContainer,
+  HeaderTitle,
+  HeaderGradient,
+  HeaderBreadcrumb,
+  HeaderActions
+} from './'
 
 export function AppBarHeader() {
   return (
     <Box sx={{ position: 'relative' }}>
       <HeaderGradient />
       <AppBarWrapper>
-        <WrapperContainer>
+        <AppBarContainer>
           <HeaderBreadcrumb />
           <HeaderActions />
-        </WrapperContainer>
+        </AppBarContainer>
       </AppBarWrapper>
       <HeaderTitle />
     </Box>

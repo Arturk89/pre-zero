@@ -1,0 +1,37 @@
+.loginWrapper {
+  background: radial-gradient(
+    circle,
+    rgba(51, 92, 99, 1) 27%,
+    rgba(0, 36, 42, 1) 100%
+  );
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 8px;
+  min-width: 25%;
+  max-width: 30%;
+}
+
+.logoWrapper {
+  padding-bottom: 4rem;
+  padding-top: 150px;
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.fieldsWrapper {
+  padding-bottom: 2rem;
+}
+
+.fieldWrapper {
+  padding-bottom: 2rem;
+}

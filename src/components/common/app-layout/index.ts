@@ -1,1 +1,7 @@
-export { ApplicationWrapper } from "./app-layout-wpapper.component";
+export {
+  ApplicationWrapper,
+  MainLayoutWrapper,
+  BodyWrapper,
+  TableWrapper,
+  TableOffset
+} from './app-layout-wrapper.component'

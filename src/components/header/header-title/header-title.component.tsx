@@ -1,5 +1,5 @@
 import { Breadcrumbs, Link, Box, Typography } from '@mui/material'
-import style from './style.module.scss'
+import style from '../style.module.scss'
 
 export function HeaderTitle() {
   return (

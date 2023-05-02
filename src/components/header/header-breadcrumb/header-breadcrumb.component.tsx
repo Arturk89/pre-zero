@@ -1,4 +1,4 @@
-import { Box, Breadcrumbs, Grid, Link, Typography } from '@mui/material'
+import { Breadcrumbs, Grid, Link, Typography } from '@mui/material'
 
 export function HeaderBreadcrumb() {
   return (

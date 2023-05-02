@@ -17,8 +17,12 @@
     "paths": {
       "@/*": ["./src/*"],
       "components/*": ["components/*"],
+      "containers/*": ["conatiners/*"],
       "assets/*": ["assets/*"],
-      "routes/*": ["routes/*"]
+      "routes/*": ["routes/*"],
+      "layout/*": ["layout/*"],
+      "pages/*": ["pages/*"],
+      "config/*": ["config/*"]
     },
 
     /* Linting */

@@ -1,0 +1,5 @@
+export { SidebarWrapper } from './sidebar-wrapper/sidebar-wrapper.component'
+export { SidebarLogo } from './sidebar-logo/sidebar-logo.component'
+export { SidebarTitle } from './sidebar-title/sidebar-title.component'
+export { SidebarLink } from './sidebar-link/sidebar-link.component'
+export { Sidebar } from './sidebar-component'

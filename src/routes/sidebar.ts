@@ -7,9 +7,9 @@ import GroupIcon from '@mui/icons-material/Group'
 import { paths } from './routes'
 
 type Sidebar = {
-  id: string
+  name: string
   children: {
-    id: string
+    name: string
     Icon: ComponentType
     href: string
     active: boolean
@@ -18,34 +18,34 @@ type Sidebar = {
 
 export const sidebar: Sidebar[] = [
   {
-    id: 'Dział Techniczny',
+    name: 'Dział Techniczny',
     children: [
       {
-        id: 'Warsztat',
+        name: 'Warsztat',
         Icon: ConstructionIcon,
         href: paths.GARAGES.path,
         active: true
       },
       {
-        id: 'Magazyn',
+        name: 'Magazyn',
         Icon: WarehouseIcon,
         href: paths.STORAGE.path,
         active: false
       },
       {
-        id: 'Pojazdy',
+        name: 'Pojazdy',
         Icon: LocalShippingIcon,
         href: paths.CARS.path,
         active: false
       },
       {
-        id: 'Uzytkownicy',
+        name: 'Uzytkownicy',
         Icon: GroupIcon,
         href: paths.USERS.path,
         active: false
       },
       {
-        id: 'Ustawienia',
+        name: 'Ustawienia',
         Icon: SettingsIcon,
         href: paths.SETTINGS.path,
         active: false

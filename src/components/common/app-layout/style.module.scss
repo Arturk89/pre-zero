@@ -3,3 +3,29 @@
   height: 100vh;
   overflow: hidden;
 }
+
+.mainWrapper {
+  display: flex;
+  height: 100%;
+}
+
+.bodyWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tableWrapper {
+  width: 100%;
+  flex: 1;
+  background-color: rgba(1, 35, 40, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tableOffset {
+  padding: 8px 24px 24px 24px;
+  height: 100%;
+}

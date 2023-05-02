@@ -10,7 +10,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src/'),
       routes: `${path.resolve(__dirname, './src/routes/')}`,
       assets: `${path.resolve(__dirname, './src/assets/')}`,
-      components: `${path.resolve(__dirname, './src/components/')}`
+      components: `${path.resolve(__dirname, './src/components/')}`,
+      containers: `${path.resolve(__dirname, './src/containers/')}`,
+      layout: `${path.resolve(__dirname, './src/layout/')}`,
+      pages: `${path.resolve(__dirname, './src/pages/')}`,
+      config: `${path.resolve(__dirname, './src/config/')}`
     }
   },
   css: {

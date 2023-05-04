@@ -11,7 +11,7 @@ export const paths: PathStructure = {
   },
   [Paths.HOME]: {
     name: 'Dzień dobry',
-    path: 'home',
+    path: '/home',
     roles: allRoles
   },
   [Paths.LOGIN]: {

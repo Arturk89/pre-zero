@@ -18,8 +18,10 @@ import {
   Logo
 } from 'components/login'
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined'
+import { useNavigate } from 'react-router-dom'
 
 export function LoginContainer() {
+  const navigate = useNavigate()
   const { register, handleSubmit, formState } = useForm<LoginFields>({
     mode: 'onSubmit',
     resolver: zodResolver(loginSchema),
@@ -61,6 +63,7 @@ export function LoginContainer() {
           <PrimaryButton
             text="Zaloguj się"
             Icon={LockOpenOutlinedIcon}
+            onClick={() => navigate('/home/garage')}
             type="submit"
             fullWidth
           />

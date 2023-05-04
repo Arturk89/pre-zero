@@ -1,10 +1,7 @@
 import * as z from 'zod'
 import { IS_VALID_PASSWORD } from 'config/regex'
 
-export type LoginFields = {
-  login: string
-  password: string
-}
+export type LoginFields = z.infer<typeof loginSchema>
 
 export const defaultValues = {
   login: '',

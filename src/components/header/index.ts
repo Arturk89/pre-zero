@@ -5,3 +5,4 @@ export { HeaderBreadcrumb } from './header-breadcrumb/header-breadcrumb.componen
 export { HeaderGradient } from './header-gradient/header-gradient.component'
 export { HeaderTitle } from './header-title/header-title.component'
 export { AppBarHeader } from './app-bar.component'
+export { HeaderDropdown } from './header-dropdown/header-dropdown.component'

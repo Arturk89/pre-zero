@@ -22,7 +22,8 @@
       "routes/*": ["routes/*"],
       "layout/*": ["layout/*"],
       "pages/*": ["pages/*"],
-      "config/*": ["config/*"]
+      "config/*": ["config/*"],
+      "HOC/*": ["HOC/*"]
     },
 
     /* Linting */

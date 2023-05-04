@@ -14,7 +14,8 @@ export default defineConfig({
       containers: `${path.resolve(__dirname, './src/containers/')}`,
       layout: `${path.resolve(__dirname, './src/layout/')}`,
       pages: `${path.resolve(__dirname, './src/pages/')}`,
-      config: `${path.resolve(__dirname, './src/config/')}`
+      config: `${path.resolve(__dirname, './src/config/')}`,
+      HOC: `${path.resolve(__dirname, './src/HOC/')}`
     }
   },
   css: {

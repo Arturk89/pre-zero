@@ -8,9 +8,9 @@ import { theme } from 'config/material-ui'
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Suspense>
-        <RouterProvider router={routesConfig} />
-      </Suspense>
+      {/* <Suspense> */}
+      <RouterProvider router={routesConfig} />
+      {/* </Suspense> */}
     </ThemeProvider>
   )
 }

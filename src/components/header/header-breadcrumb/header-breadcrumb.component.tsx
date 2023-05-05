@@ -3,7 +3,6 @@ import { Breadcrumbs, Grid, Link, Typography } from '@mui/material'
 export function HeaderBreadcrumb() {
   return (
     <Grid item>
-      <Typography sx={{ color: 'primary.main' }}>Przegląd zleceń</Typography>
       <Breadcrumbs aria-label="breadcrumb" sx={{ fontSize: '.8rem' }}>
         <Link underline="hover" color="inherit" href="/">
           MUI

@@ -1,7 +1,6 @@
-import { List, Divider, Box } from '@mui/material'
+import { List, Divider, Box, Typography } from '@mui/material'
 import { sidebar } from 'routes/sidebar'
-import { SidebarWrapper, SidebarLogo, SidebarTitle, SidebarLink } from './'
-import PersonIcon from '@mui/icons-material/Person'
+import { SidebarWrapper, SidebarTitle, SidebarLogo, SidebarLink } from './'
 import style from './style.module.scss'
 
 export function Sidebar() {
@@ -11,10 +10,9 @@ export function Sidebar() {
         <List disablePadding>
           <SidebarLogo />
           <Divider light className={style.divider} />
-          <SidebarLink name="Profil" href="/" Icon={PersonIcon} />
           {sidebar.map(({ name, children }) => (
             <Box key={name}>
-              <Divider light className={style.divider} />
+              <SidebarTitle name="Dział Techniczny" />
               {children.map((link) => (
                 <SidebarLink
                   key={link.name}

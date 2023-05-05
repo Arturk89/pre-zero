@@ -17,7 +17,7 @@ export function MenuDropdown() {
   return (
     <>
       <IconButton onClick={handleClick} sx={{ p: 0.5 }}>
-        <Avatar src="/broken-image.jpg" sx={{ bgcolor: 'primary.main' }} />
+        <Avatar src="/broken-image.jpg" />
       </IconButton>
       <HeaderDropdown
         anchorEl={anchorEl}

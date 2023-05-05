@@ -1,23 +1,20 @@
 import { List, Divider, Box } from '@mui/material'
 import { sidebar } from 'routes/sidebar'
 import { SidebarWrapper, SidebarLogo, SidebarTitle, SidebarLink } from './'
+import PersonIcon from '@mui/icons-material/Person'
+import style from './style.module.scss'
 
 export function Sidebar() {
   return (
-    <Box
-      component="nav"
-      sx={{
-        padding: '1rem',
-        borderRadius: '0.75rem'
-      }}
-    >
+    <Box component="nav" className={style.sidebar}>
       <SidebarWrapper>
         <List disablePadding>
           <SidebarLogo />
-          <Divider />
+          <Divider light className={style.divider} />
+          <SidebarLink name="Profil" href="/" Icon={PersonIcon} />
           {sidebar.map(({ name, children }) => (
             <Box key={name}>
-              <SidebarTitle name={name} />
+              <Divider light className={style.divider} />
               {children.map((link) => (
                 <SidebarLink
                   key={link.name}

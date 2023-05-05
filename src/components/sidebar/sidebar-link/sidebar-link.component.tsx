@@ -21,7 +21,8 @@ export const SidebarLink = ({ name, href, Icon }: Props) => {
       sx={{
         paddingLeft: '1rem',
         paddingRight: '1rem',
-        marginTop: '.3rem'
+        marginTop: '.3rem',
+        marginBottom: '.3rem'
       }}
     >
       <ListItemButton

@@ -122,41 +122,41 @@ const components = {
       }
     }
   },
-  MuiDivider: {
-    styleOverrides: {
-      root: {
-        backgroundColor: 'rgb(255,255,255,0.15)'
-      }
-    }
-  },
-  MuiListItemButton: {
-    styleOverrides: {
-      root: {
-        '&.Mui-selected': {
-          color: '#8bba14'
-        }
-      }
-    }
-  },
-  MuiListItemText: {
-    styleOverrides: {
-      primary: {
-        fontSize: 14,
-        fontWeight: theme.typography.fontWeightMedium
-      }
-    }
-  },
-  MuiListItemIcon: {
-    styleOverrides: {
-      root: {
-        color: 'inherit',
-        minWidth: 'auto',
-        '& svg': {
-          fontSize: 20
-        }
-      }
-    }
-  },
+  // MuiDivider: {
+  //   styleOverrides: {
+  //     root: {
+  //       backgroundColor: 'rgb(255,255,255,0.15)'
+  //     }
+  //   }
+  // },
+  // MuiListItemButton: {
+  //   styleOverrides: {
+  //     root: {
+  //       '&.Mui-selected': {
+  //         color: '#8bba14'
+  //       }
+  //     }
+  //   }
+  // },
+  // MuiListItemText: {
+  //   styleOverrides: {
+  //     primary: {
+  //       fontSize: 14,
+  //       fontWeight: theme.typography.fontWeightMedium
+  //     }
+  //   }
+  // },
+  // MuiListItemIcon: {
+  //   styleOverrides: {
+  //     root: {
+  //       color: 'inherit',
+  //       minWidth: 'auto',
+  //       '& svg': {
+  //         fontSize: 20
+  //       }
+  //     }
+  //   }
+  // },
   MuiAvatar: {
     styleOverrides: {
       root: {

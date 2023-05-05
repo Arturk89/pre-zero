@@ -15,6 +15,7 @@ export default defineConfig({
       layout: `${path.resolve(__dirname, './src/layout/')}`,
       pages: `${path.resolve(__dirname, './src/pages/')}`,
       config: `${path.resolve(__dirname, './src/config/')}`,
+      api: `${path.resolve(__dirname, './src/api/')}`,
       HOC: `${path.resolve(__dirname, './src/HOC/')}`
     }
   },

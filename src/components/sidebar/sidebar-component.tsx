@@ -12,7 +12,7 @@ export function Sidebar() {
           <SidebarLogo />
           <Divider />
           {sidebar.map(({ name, children }) => (
-            <Box key={name} sx={{ bgcolor: 'primary.dark' }}>
+            <Box key={name} sx={{ bgcolor: 'primary.main' }}>
               <SidebarTitle name={name} />
               {children.map((link) => (
                 <SidebarLink

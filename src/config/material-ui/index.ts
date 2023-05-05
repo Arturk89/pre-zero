@@ -2,30 +2,35 @@ import { createTheme } from '@mui/material/styles'
 
 const palette = {
   primary: {
-    light: '#335C63',
-    main: '#01343c',
-    dark: '#00242A'
+    light: 'rgb(73, 163, 241)',
+    main: 'rgb(26, 115, 232)'
+    // dark: '#00242A'
+  },
+  secondary: {
+    light: 'rgb(66, 66, 74)',
+    main: 'rgb(52, 71, 103)',
+    dark: 'rgb(25, 25, 25)'
   },
   error: {
-    light: '#FF8078',
-    main: '#FF6157',
-    dark: '#B2433C'
+    light: 'rgb(239, 57, 53)',
+    main: 'rgb(224, 67, 63)',
+    dark: 'rgb(229, 57, 53)'
   },
   warning: {
-    light: '#F08F47',
-    main: '#ED741A',
-    dark: '#A55112'
+    light: 'rgb(255, 467, 38)',
+    main: 'rgb(251, 140, 0)'
+    // dark: '#A55112'
   },
   success: {
-    light: '#A2C743',
-    main: '#8BBA14',
-    dark: '#61820E'
-  },
-  info: {
-    light: '#33CCFF',
-    main: '#00c0ff',
-    dark: '#0086B2'
+    light: 'rgb(102, 187, 106)',
+    main: 'rgb(76, 175, 80)',
+    dark: 'rgb(67, 160, 71)'
   }
+  // info: {
+  //   light: '#33CCFF',
+  //   main: '#00c0ff',
+  //   dark: '#0086B2'
+  // }
 }
 
 const typography = {

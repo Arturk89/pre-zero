@@ -10,8 +10,7 @@ import {
 
 export function AppBarHeader() {
   return (
-    <Box sx={{ position: 'relative' }}>
-      <HeaderGradient />
+    <Box>
       <AppBarWrapper>
         <AppBarContainer>
           <HeaderBreadcrumb />

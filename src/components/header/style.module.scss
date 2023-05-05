@@ -20,21 +20,9 @@
 
 .appbarWrapper {
   height: 61px;
-  background: transparent !important;
+  // background: transparent !important;
 
   &__toolbar {
     height: 100%;
   }
-}
-
-.appbar {
-  position: absolute;
-  width: 100%;
-  height: 300px;
-  z-index: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(1, 35, 40, 1) 0%,
-    rgba(139, 186, 20, 1) 90%
-  );
 }

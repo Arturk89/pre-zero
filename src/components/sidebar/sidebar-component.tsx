@@ -2,17 +2,21 @@ import { List, Divider, Box } from '@mui/material'
 import { sidebar } from 'routes/sidebar'
 import { SidebarWrapper, SidebarLogo, SidebarTitle, SidebarLink } from './'
 
-const DRAWER_WIDTH = 220
-
 export function Sidebar() {
   return (
-    <Box component="nav" sx={{ width: DRAWER_WIDTH }}>
+    <Box
+      component="nav"
+      sx={{
+        padding: '1rem',
+        borderRadius: '0.75rem'
+      }}
+    >
       <SidebarWrapper>
         <List disablePadding>
           <SidebarLogo />
           <Divider />
           {sidebar.map(({ name, children }) => (
-            <Box key={name} sx={{ bgcolor: 'primary.main' }}>
+            <Box key={name}>
               <SidebarTitle name={name} />
               {children.map((link) => (
                 <SidebarLink
@@ -22,7 +26,6 @@ export function Sidebar() {
                   Icon={link.Icon}
                 />
               ))}
-              <Divider sx={{ mt: 2 }} />
             </Box>
           ))}
         </List>

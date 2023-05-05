@@ -3,7 +3,6 @@ import {
   AppBarWrapper,
   AppBarContainer,
   HeaderTitle,
-  HeaderGradient,
   HeaderBreadcrumb,
   HeaderActions
 } from './'

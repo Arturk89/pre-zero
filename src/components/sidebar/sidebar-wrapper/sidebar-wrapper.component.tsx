@@ -6,8 +6,7 @@ export const SidebarWrapper = ({ children }: { children: React.ReactNode }) => {
     <Box
       className={style.sidebarWrapper}
       sx={{
-        backgroundColor: 'primary.main',
-        borderRightColor: 'primary.light'
+        background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))'
       }}
     >
       {children}

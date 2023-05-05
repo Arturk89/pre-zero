@@ -105,12 +105,12 @@ const Example = () => {
         <Box sx={{ display: 'flex' }}>
           <Tooltip title="Dodaj nowe zlecenie" placement="bottom-start" arrow>
             <IconButton>
-              <AddIcon sx={{ color: '#01343c' }} />
+              <AddIcon />
             </IconButton>
           </Tooltip>
           <Tooltip title="Statystyki" placement="bottom-start" arrow>
             <IconButton>
-              <QueryStatsIcon sx={{ color: '#01343c' }} />
+              <QueryStatsIcon />
             </IconButton>
           </Tooltip>
         </Box>

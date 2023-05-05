@@ -2,8 +2,8 @@ import React from 'react'
 import { Form } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { TextField } from '@mui/material'
-import { PrimaryButton } from 'components/common/button'
+import { TextField, InputAdornment } from '@mui/material'
+import { PrimaryButton } from 'components/common/button/primary'
 import {
   LoginFields,
   defaultValues,
@@ -44,6 +44,14 @@ export function LoginContainer() {
                   key={f.id}
                   variant="outlined"
                   label={f.label}
+                  type={f.type}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <f.Icon />
+                      </InputAdornment>
+                    )
+                  }}
                   fullWidth
                   error={!!formState.errors[f.name]}
                   helperText={
@@ -61,12 +69,13 @@ export function LoginContainer() {
             ))}
           </FieldsWrapper>
           <PrimaryButton
-            text="Zaloguj się"
-            Icon={LockOpenOutlinedIcon}
+            startIcon={<LockOpenOutlinedIcon />}
             onClick={() => navigate('/home/garage')}
             type="submit"
             fullWidth
-          />
+          >
+            Zaloguj się
+          </PrimaryButton>
         </Form>
       </FormWrapper>
     </LoginWrapper>

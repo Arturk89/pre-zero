@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import PreZero from 'assets/logo_pre-zero.png'
+import PreZero from 'assets/pre-zero-with-colors.png'
 import style from '../style.module.scss'
 
 export const Logo = () => {

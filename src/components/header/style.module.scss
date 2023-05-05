@@ -19,10 +19,11 @@
 }
 
 .appbarWrapper {
-  height: 61px;
+  // height: 61px;
   background: transparent !important;
 
   &__toolbar {
+    padding-bottom: 1rem;
     height: 100%;
   }
 }

@@ -2,7 +2,6 @@ import { Box } from '@mui/material'
 import {
   AppBarWrapper,
   AppBarContainer,
-  HeaderTitle,
   HeaderBreadcrumb,
   HeaderActions
 } from './'
@@ -16,7 +15,6 @@ export function AppBarHeader() {
           <HeaderActions />
         </AppBarContainer>
       </AppBarWrapper>
-      <HeaderTitle />
     </Box>
   )
 }

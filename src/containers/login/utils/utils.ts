@@ -1,5 +1,8 @@
+import { ComponentType } from 'react'
 import * as z from 'zod'
 import { IS_VALID_PASSWORD } from 'config/regex'
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
+import HttpsIcon from '@mui/icons-material/Https'
 
 export type LoginFields = z.infer<typeof loginSchema>
 
@@ -29,20 +32,23 @@ type FormFields = {
   label: string
   type: string
   placeholder?: string
+  Icon: ComponentType
 }
 
 export const formFields: FormFields[] = [
   {
     id: '_1',
     name: 'login',
-    label: 'login',
+    label: 'e-mail',
     type: 'text',
-    placeholder: 'Uzytkownik'
+    placeholder: 'Uzytkownik',
+    Icon: AlternateEmailIcon
   },
   {
     id: '_2',
     name: 'password',
     label: 'hasło',
-    type: 'password'
+    type: 'password',
+    Icon: HttpsIcon
   }
 ]
